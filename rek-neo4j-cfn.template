@@ -26,7 +26,7 @@
     "NotebokGitRepo": {
       "Description": "The git repo of the notebook",
       "Type": "String",
-      "Default": "https://github.com/katedubbs/social-networks-rekognition-neo4j"
+      "Default": "https://github.com/katedubbs/social-networks-rekognition-neo4j.git"
     }
   },
   "Mappings": {
@@ -37,7 +37,7 @@
       "eu-west-1": {"AMI": "ami-028a25f96614a39e9"},
       "sa-east-1": {"AMI": "ami-0ddeff6b17d17994d"},
       "us-east-1": {"AMI": "ami-06ddeee5b31a0308f"},
-      "us-east-2": {"AMI": "ami-0c3db42b191436c09"}
+      "us-east-2": {"AMI": "ami-0c3db42b191436c09"},
       "us-west-1": {"AMI": "ami-049991f269b6d1a68"},
       "us-west-2": {"AMI": "ami-0b43cec40e1390f34"}
     }
@@ -140,7 +140,6 @@
               "cd /opt/notebook\n",
               "apt-get install git -y\n",
               "git clone ",{"Ref":"NotebokGitRepo"},"\n",
-              "chmod 777 /opt/notebook -R\n"
 
             ]]
           }

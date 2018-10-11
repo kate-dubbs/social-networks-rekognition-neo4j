@@ -40,7 +40,7 @@ def graphbacon(noded,linkd):
 		<body>
 		<svg width="600" height="400"></svg>
 		<div id=\"{id}\"></div>
-		<script type="text/javascript" src="../lib/d3.v4.min.js"></script>
+		<script type="text/javascript" src="d3.min.js"></script>
 
 		<script type="text/javascript">
 		var loc = 20;
@@ -157,7 +157,7 @@ def graphbacon(noded,linkd):
     unique_id = str(uuid.uuid4())
 
     html = html.format(id=unique_id,nodedata=json.dumps(noded, indent=1),linkdata=json.dumps(linkd, indent=1))
-    filename = "figure/relationships-{}.html".format(unique_id)
+    filename = "relationships-{}.html".format(unique_id)
     file = open(filename, "w")
     file.write(html)
     file.close()
