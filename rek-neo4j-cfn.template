@@ -140,8 +140,8 @@
               "cd /home/ubuntu/lab\n",
               "apt-get install git -y\n",
               "git clone ",{"Ref":"NotebookGitRepo"},"\n",
-              "chmod -R 755 /home/ubuntu/lab"
-
+              "chmod -R 777 /home/ubuntu/lab\n",
+              "chown -R ubuntu:ubuntu /home/ubuntu/lab\n"
             ]]
           }
         }
