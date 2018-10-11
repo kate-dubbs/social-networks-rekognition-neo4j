@@ -8,13 +8,13 @@ This lab highlights the use of AWS Rekognition's facial identification functiona
 # Prerequisites
 
 - A Key-Pair for your EC2 instance (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair)
-- PuTTy (https://www.putty.org/)
+- If you are using Windows, you will need PuTTy (https://www.putty.org/)
 
 
 # Launch the CloudFormation Template
 
 ## Download the Cloudformation File
-1. Right click the following link and click "Save Target As" https://github.com/kate-dubbs/social-networks-rekognition-neo4j/blob/master/rek-neo4j-cfn.template
+1. Right click the following link and click "Save Target As" https://raw.githubusercontent.com/kate-dubbs/social-networks-rekognition-neo4j/master/rek-neo4j-cfn.template
 2. Navigate to Amazon CloudFormation in the AWS Console
 3. Click Create Stack
 ![Create Stack](./images/step0.png)
