@@ -23,10 +23,10 @@
       "ConstraintDescription":"must be a valid EC2 instance type."
     },
 
-    "NotebokGitRepo": {
+    "NotebookGitRepo": {
       "Description": "The git repo of the notebook",
       "Type": "String",
-      "Default": "https://github.com/katedubbs/social-networks-rekognition-neo4j.git"
+      "Default": "https://github.com/kate-dubbs/social-networks-rekognition-neo4j.git"
     }
   },
   "Mappings": {
@@ -139,7 +139,7 @@
               "mkdir /opt/notebook\n",
               "cd /opt/notebook\n",
               "apt-get install git -y\n",
-              "git clone ",{"Ref":"NotebokGitRepo"},"\n",
+              "git clone ",{"Ref":"NotebookGitRepo"},"\n",
 
             ]]
           }
