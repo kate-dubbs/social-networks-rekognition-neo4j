@@ -14,11 +14,15 @@ This lab highlights the use of AWS Rekognition's facial identification functiona
 # Launch the CloudFormation Template
 
 ## Download the Cloudformation File
-1. Right click the following link and click "Save Target As" https://raw.githubusercontent.com/kate-dubbs/social-networks-rekognition-neo4j/master/rek-neo4j-cfn.template
-2. Navigate to Amazon CloudFormation in the AWS Console
+1. Navigate to Amazon CloudFormation in the AWS Console
 3. Click Create Stack
 ![Create Stack](./images/step0.png)
-4. Select Upload a template to Amazon S3, then click Choose File and navigate to the template you saved in Step 1. Click Next.
+4. Select Specify an Amazon S3 template URL, then past the following URL:
+````
+https://s3.amazonaws.com/wwps-sagemaker-workshop/rek-neo4j-cfn.template
+
+````
+Click Next.
 ![Upload Template](./images/step1.png)
 5. Type in any value you want for Stack Name
 6. Under Parameters, leave everything default except the KeyName. Select the Key you created as part of the prerequisites. If you did not create a key-pair, you can find instructions for creating a Key-Pair here: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair
@@ -33,7 +37,10 @@ This lab highlights the use of AWS Rekognition's facial identification functiona
 ![Complete Stack](./images/step0.png)
 2. Click on Outputs to view the Public IP address of the EC2 instance you created, you will need this in the following steps.
 ![Template Outputs](./images/step4.png)
-3. To access Neo4j, paste http://[DNSPublicInstance]:7474 into your browser. So the url will look something like: http://ec2-54-91-36-181.compute-1.amazonaws.com:7474
+3. To access Neo4j, paste http://[DNSPublicInstance]:7474 into your browser. So the url will look something like: 
+````
+http://ec2-54-91-36-181.compute-1.amazonaws.com:7474
+````
 4. In Neo4j, you will need to configure a password. I recommend just using the word password for this lab, because that is the default password in the Jupyter Notebook. If you set your password to something else, make sure you remember it and update it in the Jupyter Notebook later in this lab. The default password is neo4j. So sign in with neo4j as both the username and password.
 ![Password Config](./images/step5.png)
 5. You can play around with the movie database in Neo4j by clicking on the star symbol in the menu on the left. Then click "Example Graphs" and select the Movie Graph radio button. This will open a window on the right that describes the Movie Graph data, click the right arrow to scroll to the query example. Clicking the query code will automatically run the example query and build an example graph.
