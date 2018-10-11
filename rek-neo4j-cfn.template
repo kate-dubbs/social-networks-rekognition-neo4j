@@ -136,10 +136,11 @@
 
               "#Get Notebooks ready\n",
 
-              "mkdir /opt/notebook\n",
-              "cd /opt/notebook\n",
+              "mkdir /home/ubuntu/lab\n",
+              "cd /home/ubuntu/lab\n",
               "apt-get install git -y\n",
               "git clone ",{"Ref":"NotebookGitRepo"},"\n",
+              "chmod -R 755 /home/ubuntu/lab"
 
             ]]
           }
