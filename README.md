@@ -33,7 +33,7 @@ This lab highlights the use of AWS Rekognition's facial identification functiona
 ![Complete Stack](./images/step0.png)
 2. Click on Outputs to view the Public IP address of the EC2 instance you created, you will need this in the following steps.
 ![Template Outputs](./images/step4.png)
-3. To access Neo4j, paste http://<DNSPublicInstance>:7474 into your browser. So the url will look something like: http://ec2-54-91-36-181.compute-1.amazonaws.com:7474
+3. To access Neo4j, paste http://[DNSPublicInstance]:7474 into your browser. So the url will look something like: http://ec2-54-91-36-181.compute-1.amazonaws.com:7474
 4. In Neo4j, you will need to configure a password. I recommend just using the word password for this lab, because that is the default password in the Jupyter Notebook. If you set your password to something else, make sure you remember it and update it in the Jupyter Notebook later in this lab. The default password is neo4j. So sign in with neo4j as both the username and password.
 ![Password Config](./images/step5.png)
 5. You can play around with the movie database in Neo4j by clicking on the star symbol in the menu on the left. Then click "Example Graphs" and select the Movie Graph radio button. This will open a window on the right that describes the Movie Graph data, click the right arrow to scroll to the query example. Clicking the query code will automatically run the example query and build an example graph.
@@ -42,10 +42,10 @@ This lab highlights the use of AWS Rekognition's facial identification functiona
 # Log in to the Deep Learning AMI
 
 1. To SSH into your EC2 instance with the Deep Learning AMI use the following guides based on your operating system. You will need your key-pair from earlier and your DNS address from the Output of your CloudFormation stack.
-a. Windows Client: https://docs.aws.amazon.com/dlami/latest/devguide/setup-jupyter-configure-client-windows.html
+    - Windows Client: https://docs.aws.amazon.com/dlami/latest/devguide/setup-jupyter-configure-client-windows.html
 !! IMPORTANT: PuTTy does not work with a .pem file, you will need to use a .ppk file. Instructions for converting your pem file to a ppk file can be found here: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html
-b. Mac Client: https://docs.aws.amazon.com/dlami/latest/devguide/setup-jupyter-configure-client-mac.html
-c. https://docs.aws.amazon.com/dlami/latest/devguide/setup-jupyter-configure-client-linux.html
+    - Mac Client: https://docs.aws.amazon.com/dlami/latest/devguide/setup-jupyter-configure-client-mac.html
+    - https://docs.aws.amazon.com/dlami/latest/devguide/setup-jupyter-configure-client-linux.html
 2. Once you are SSH'd into your instance (and have port forwarding configured) we will start the Jupyter Notebook server by simply typing:
 ```
 jupyter notebook
